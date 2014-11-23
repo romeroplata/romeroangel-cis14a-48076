@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h1 id="uno">WIN WIN + + + + + + + The game</h1>
+<h1 ><img src="../aprende_a_sumar_web/pic1.jpg" alt="2+2=? 2.0+2.0+?" id="pic1" /></h1>
+<link href="aprende_a _sumar.css" rel="stylesheet" type="text/css"/>
+<h2 id="uno"> A fun way to learn for Kids</h2>
+<h3 id="uno"> Si deseas que tus hijos te tengan presente en su futuro? &#160;&#160;&#160;Mantente presente en sus actividades y disfruten el presente!</h3>
+
+ <a href="aprende_a_sumar_main_page.html">PAGINA PRINCIPAL</a>
+      <a href="aprende_a_sumar_log_in.html">LOGIN</a>
+      <a href="register_now_form.html">REGISTER</a>
+      <a href="aprende_a_sumar_the_game.html">+ + THE GAME</a>
+      
+ <P id="pplayer1">PLAYER 1 = X RIGHT</P> <P id="pplayer2">PLAYER 2 = X RIGHT</P>
+
+  
+      <form name="usersReg" id="users" action="aprender_a_sumar_the_game.html" onsubmit="return validate_form()" method="get">
+	<fieldset>
+		<legend>Player 1</legend>
+		<label id="lplayer1">cuanto es</label><br>
+			<input type="text" name="kidAnswer" id="kidAnswer" />
+	
+        
+	</fieldset>
+    <fieldset>
+		<legend>Player 2</legend>
+		<label id="lplayer2">cuanto es</label><br>
+			<input type="text" name="parentAnswer" id="parentAnswer" />
+	
+        
+	</fieldset>
+	<div>
+		<input type="submit" value="nuestra respuesta es : )" />
+			<!-- restores default values -->
+	</div>
+</form>
+ <script>
+ var sumaKidFirstNunmber=Math.floor(Math.random()*101);
+ var sumaKidSecondNunmber=Math.floor(Math.random()*101);
+ var sumaKidTotal=sumaKidFirstNunmber+sumaKidSecondNunmber
+ document.write(sumaKidTotal+"</br>");
+ document.getElementById("lplayer1").innerHTML = "Cuanto Es "+sumaKidFirstNunmber+" + "+sumaKidSecondNunmber;
+ 
+  var sumaParentFirstNunmber=Math.floor(Math.random()*10001);
+ var sumaParentSecondNunmber=Math.floor(Math.random()*10001);
+ var sumaParentTotal=sumaParentFirstNunmber+sumaParentSecondNunmber
+ document.write(sumaParentTotal+"</br>");
+ 
+ document.getElementById("lplayer2").innerHTML = "Cuanto Es "+sumaParentFirstNunmber+" + "+sumaParentSecondNunmber;
+ 
+var score1=10;
+ var score2=20;
+  document.getElementById("pplayer1").innerHTML = "Player 1 = "+score1+" correctas ";
+    document.getElementById("pplayer2").innerHTML = "Player 2 = "+score2+" correctas ";
+ 
+ 
+  </script>
+
+
+</body>
+</html>
