@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
+<script type="text/javascript" src="getForm.js"></script>
 </head>
 
 <body>
@@ -20,20 +21,17 @@
  <P id="pplayer1">PLAYER 1 = X RIGHT</P> <P id="pplayer2">PLAYER 2 = X RIGHT</P>
 
   
-      <form name="usersReg" id="users" action="aprender_a_sumar_the_game.html" onsubmit="return validate_form()" method="get">
+      <form name="usersReg" id="users" action="aprende_a_sumar_the_game.html"  method="get">
 	<fieldset>
 		<legend>Player 1</legend>
 		<label id="lplayer1">cuanto es</label><br>
 			<input type="text" name="kidAnswer" id="kidAnswer" />
-	
-        
-	</fieldset>
-    <fieldset>
 		<legend>Player 2</legend>
+       
 		<label id="lplayer2">cuanto es</label><br>
-			<input type="text" name="parentAnswer" id="parentAnswer" />
-	
-        
+       <input type="text" name="papaAnswer" id="papaAnswer" />
+   <input type="text" name="kidAnswer3" id="kidAnswer3" />
+   
 	</fieldset>
 	<div>
 		<input type="submit" value="nuestra respuesta es : )" />
@@ -45,20 +43,31 @@
  var sumaKidSecondNunmber=Math.floor(Math.random()*101);
  var sumaKidTotal=sumaKidFirstNunmber+sumaKidSecondNunmber
  document.write(sumaKidTotal+"</br>");
- document.getElementById("lplayer1").innerHTML = "Cuanto Es "+sumaKidFirstNunmber+" + "+sumaKidSecondNunmber;
+ document.getElementById("lplayer1").innerHTML = "Cuanto Es ? "+sumaKidFirstNunmber+" + "+sumaKidSecondNunmber;
  
   var sumaParentFirstNunmber=Math.floor(Math.random()*10001);
  var sumaParentSecondNunmber=Math.floor(Math.random()*10001);
  var sumaParentTotal=sumaParentFirstNunmber+sumaParentSecondNunmber
  document.write(sumaParentTotal+"</br>");
  
- document.getElementById("lplayer2").innerHTML = "Cuanto Es "+sumaParentFirstNunmber+" + "+sumaParentSecondNunmber;
+ document.getElementById("lplayer2").innerHTML = "Cuanto Es ? "+sumaParentFirstNunmber+" + "+sumaParentSecondNunmber;
  
 var score1=10;
  var score2=20;
   document.getElementById("pplayer1").innerHTML = "Player 1 = "+score1+" correctas ";
     document.getElementById("pplayer2").innerHTML = "Player 2 = "+score2+" correctas ";
- 
+	
+ 	var url=document.location.href;
+	$_GET=getForm(url);
+	for(property in $_GET){
+		document.write(property+"="+$_GET[property]+"</br>");
+	}
+	
+	var respKid=Number($_GET["kidAnswer"]);
+	var respParent=Number($_GET["parentAnswer"]);
+	
+	document.write(respKid);
+	document.write(respParent);
  
   </script>
 
