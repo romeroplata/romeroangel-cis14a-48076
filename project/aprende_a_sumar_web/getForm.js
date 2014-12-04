@@ -4,7 +4,7 @@ function getForm(url){
 	var info=url.split("?");
 	var nameValuePairs=info[1].split("&");
 	var $_GET = new Object;
-	for(var i=0;i<nameValuePairs.length-1;i++){
+	for(var i=0;i<nameValuePairs.length;i++){
 		var map=nameValuePairs[i].split("=");
 		var name=map[0];
 		var value=map[1];
